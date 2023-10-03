@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div className='border w-[90%] mx-auto'>
-            <div className="navbar bg-base-100 flex justify-between">
+        <div className='shadow-xl'>
+            <div className="navbar bg-base-100 flex justify-between w-[90%] mx-auto">
                 <div className="flex">
                     <a href='#' className="normal-case text-xl">daisyUI</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a>Shop</a></li>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/shop'>Shop</Link></li>
                     {/* <li tabIndex={0}>
                         <details>
                         <summary>Parent</summary>
@@ -35,7 +36,7 @@ const Navbar = () => {
                             <span className="font-bold text-lg">8 Items</span>
                             <span className="text-info">Subtotal: $999</span>
                             <div className="card-actions">
-                                <button className="btn btn-primary btn-block">View cart</button>
+                                <Link to='/cart' ><button className="btn btn-success btn-block">View cart</button></Link>
                             </div>
                             </div>
                         </div>
@@ -48,12 +49,12 @@ const Navbar = () => {
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             <li>
-                            <a className="justify-between">
-                                Profile
-                                <span className="badge">New</span>
-                            </a>
+                                <Link to='/profile' className="justify-between">
+                                    Profile 
+                                    <span className="badge">New</span>
+                                </Link>
                             </li>
-                            
+                            <li><a>Logout</a></li>
                         </ul>
                     </div>
                     <div className="dropdown dropdown-end lg:hidden">
@@ -61,10 +62,10 @@ const Navbar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Home</a></li>
-                            <li><a>Shop</a></li>
-                            <li><a>About</a></li>
-                            <li><a>Settings</a></li>
+                            <li><Link to='/'>Home</Link></li>
+                            <li><Link to='/shop'>Shop</Link></li>
+                            <li><Link to='/cart'>Cart</Link></li>
+                            <li><Link to='/profile'>Profile</Link></li>
                             <li><a>Logout</a></li>
                         </ul>
                     </div>
