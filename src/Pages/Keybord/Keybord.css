@@ -1,0 +1,13 @@
+.kbd {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .kbd-selected {
+    background-color: #00ff00; /* Green background color for the selected key */
+    color: #fff; /* White text color for better visibility */
+  }

@@ -1,0 +1,39 @@
+[
+    {
+      "name": "Casual ",
+      "icon": "/image1.jpg"
+    },
+    {
+      "name": "Formal ",
+      "icon": "/image2.jpg"
+    },
+    {
+      "name": "Sports",
+      "icon": "/image3.jpg"
+    },
+    {
+      "name": "Business",
+      "icon": "/image4.jpg"
+    },
+    {
+      "name": "Outdoor ",
+      "icon": "/image5.jpg"
+    },
+    {
+      "name": "Beach",
+      "icon": "/image6.jpg"
+    },
+    {
+      "name": "Traditional ",
+      "icon": "/image7.jpg"
+    },
+    {
+      "name": "Active",
+      "icon": "/image8.jpg"
+    },
+    {
+      "name": "Sleep",
+      "icon": "/image9.jpg"
+    }
+  ]
+  

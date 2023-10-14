@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <div className='shadow-xl'>
-            <div className="navbar bg-base-100 flex justify-between w-[90%] mx-auto">
+        <div className='shadow-xl bg-base-100/75 opa sticky top-0 z-10'>
+            <div className="navbar flex justify-between w-[95%] mx-auto">
                 <div className="flex">
-                    <a href='#' className="normal-case text-xl">daisyUI</a>
+                    <a href='#' className="normal-case text-xl">Pulse</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
