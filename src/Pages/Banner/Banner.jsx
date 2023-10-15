@@ -24,11 +24,11 @@ const Banner = () => {
     };
 
     const textcontent = {
-        'background-color': 'your-color-value', // Replace 'your-color-value' with a valid color value
+        '--background-color': 'your-color-value', // Replace 'your-color-value' with a valid color value
         'overflow': 'hidden', // Wrap property names in quotes
         'display': 'flex', // Wrap property names in quotes
-        'align-items': 'center', // Wrap property names in quotes
-        'justify-content': 'left', // Remove the comment syntax
+        'alignItems': 'center', // Wrap property names in quotes
+        'justifyContent': 'left', // Remove the comment syntax
     };
     
 
