@@ -5,6 +5,7 @@ import Home from '../Pages/Home/Home';
 import Shop from '../Pages/Shop/Shop';
 import Cart from '../Pages/Cart/Cart';
 import Profile from '../Pages/Profile/Profile';
+import AddItem from '../Pages/AddItem/AddItem';
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path:'*',
                 element: ''
+            },
+            {
+                path:'/AddItem',
+                element:<AddItem></AddItem>
             }
         ]
     }

@@ -1,11 +1,11 @@
 [
     {
       "name": "Casual ",
-      "icon": "/image1.jpg"
+      "icon": "/public/tshirt.png"
     },
     {
       "name": "Formal ",
-      "icon": "/image2.jpg"
+      "icon": "/public/shirt.png"
     },
     {
       "name": "Sports",

@@ -1,33 +1,31 @@
 import React, { useState } from 'react';
 import './Card.css';
 
-const Card = () => {
-    const [selectedColor, setSelectedColor] = useState();
+const Card = ({Data}) => {
+
+    console.log(Data);
+    const { itemName, itemImage, itemPrice, itemDetails, itemQuantity, itemColor, itemBrand } = Data;
+
+    const [selectedColor, setSelectedColor] = useState('#9bdc28');
+    const [selectedBrand, setselectedBrand] = useState("'Brand'");
 
     const handleColorClick = (color) => {
         setSelectedColor(color);
     };
 
-    
-    const containerStyle = {
-        card: document.querySelector(".container .card"),
+    const cardStyle = {
+        '--before-bg-color': selectedColor,
+        '--content': selectedBrand,
     };
-
-    if (containerStyle.card) {
-        containerStyle.card.style.setProperty("--before-bg-color", selectedColor ? selectedColor : '#9bdc28');
-    } 
-    // else {
-    //     console.error("Element not found.");
-    // }
 
     return (
         <div className='container c1'>
-            <div className='card' style={containerStyle}>
+            <div className='card' style={cardStyle}>
                 <div className='imgBx'>
                     <img src="/shoes.png" alt="" />
                 </div>
                 <div className='contentBx'>
-                    <h2>Nike Shoes</h2>
+                    <h2>Nike Shoe</h2>
                     <div className='size'>
                         <h3>Size : </h3>
                         <span>7</span>
