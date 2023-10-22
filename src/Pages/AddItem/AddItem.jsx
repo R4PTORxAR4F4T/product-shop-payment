@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import Card from '../Shared/Card/Card';
 import './AddItem.css';
+import Sketch from '@uiw/react-color-sketch';
+import Title from '../../Components/Title';
 
 const AddItem = () => {
     const [formData, setFormData] = useState({
         itemName: '',
         itemImage: '',
-        itemPrice: '',
-        itemDetails: '',
-        itemQuantity: '',
-        itemColor: '',
         itemBrand: '',
+        itemCategory:'',
+        itemPrice: '',
+        itemQuantity: '',
+        itemDetails: '',
+        itemColor: '',
     });
 
     const handleChange = (event) => {
@@ -22,22 +25,19 @@ const AddItem = () => {
     };
 
     return (
-        <div className='flex flex-col lg:flex-row justify-center gap-20'>
+        <div className='w-[90%] mx-auto'>
+            <Title heading='Add Item'></Title>
+            <div className='flex flex-col md:flex-row justify-center gap-20 mb-10'>
             <div className='item-box' id="formContainer">
-                <form id="inputForm">
+                <form id="inputForm" className='flex flex-col lg:grid lg:grid-cols-2 gap-10'>
                     <div className='user-box'>
                         <input type="text" id="itemName" value={formData.itemName} onChange={handleChange} required />
                         <label htmlFor="itemName">Item Name:</label>
                     </div>
 
                     <div className='user-box'>
-                        <input type="text" id="itemImage" value={formData.itemImage} onChange={handleChange} required />
-                        <label htmlFor="itemImage">Image URL:</label>
-                    </div>
-
-                    <div className='user-box'>
-                        <input type="text" id="itemColor" value={formData.itemColor} onChange={handleChange} required />
-                        <label htmlFor="itemColor">Item Color:</label>
+                        {/* <label htmlFor="itemImage">Image URL:</label> */}
+                        <input type="file" id="itemImage" value={formData.itemImage} onChange={handleChange} required className="file-input file-input-ghost w-full w-full" />
                     </div>
 
                     <div className='user-box'>
@@ -46,19 +46,46 @@ const AddItem = () => {
                     </div>
 
                     <div className='user-box'>
-                        <input type="number" id="itemPrice" value={formData.itemPrice} onChange={handleChange} required />
+                        <select id="itemCategory" value={formData.itemCategory} onChange={handleChange} required className="select select-ghost w-full">
+                            <option disabled selected>Pick the best JS framework</option>
+                            <option>Svelte</option>
+                            <option>Vue</option>
+                            <option>React</option>
+                        </select>
+                        {/* <label htmlFor="itemCategory">Item Category:</label> */}
+                    </div>
+
+                    <div className='user-box'>
+                        <input type="number" pattern="[0-9]{4}" id="itemPrice" value={formData.itemPrice} onChange={handleChange} required />
                         <label htmlFor="itemPrice">Item Price:</label>
                     </div>
 
                     <div className='user-box'>
-                        <textarea className="textarea textarea-ed w-full" id="itemDetails" value={formData.itemDetails} onChange={handleChange} placeholder="Bio" required></textarea>
-                        {/* <label htmlFor="itemDetails">Item Details:</label> */}
-                    </div>
-
-                    <div className='user-box'>
-                        <input type="number" id="itemQuantity" value={formData.itemQuantity} onChange={handleChange} required />
+                        <input type="number" pattern="[0-9]{4}" id="itemQuantity" value={formData.itemQuantity} onChange={handleChange} required />
                         <label htmlFor="itemQuantity">Item Quantity:</label>
                     </div>
+
+                    <div className='text-box'>
+                        <label className='' htmlFor="itemDetails">Item Details:</label>
+                        <textarea className="textarea textarea-ed w-full mt-3" id="itemDetails" value={formData.itemDetails} onChange={handleChange} placeholder="Bio" required></textarea>
+                    </div>
+
+                    <div className='color-box'>
+                        {/* <input type="text" id="itemColor" value={formData.itemColor} onChange={handleChange} required /> */}
+                        <label htmlFor="itemColor">Item Color:</label>
+                        <Sketch
+                            id="itemColor"
+                            style={{marginTop:10, marginBottom:20}}
+                            color={formData.itemColor}
+                            onChange={(color) => {
+                                setFormData({
+                                    ...formData,
+                                    ["itemColor"]: color.hex,
+                                });
+                            }}
+                        />
+                    </div>
+
                 </form>
             </div>
             <div className='' id="dataContainer">
@@ -72,7 +99,7 @@ const AddItem = () => {
                     <p><strong>Item Quantity:</strong> {formData.itemQuantity}</p>
                 </div> */}
             </div>
-
+        </div>
         </div>
     );
 };

@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import './Card.css';
 
-const Card = ({Data}) => {
+const Card = (Data) => {
 
-    console.log(Data);
-    const { itemName, itemImage, itemPrice, itemDetails, itemQuantity, itemColor, itemBrand } = Data;
+    const { itemName, itemImage, itemPrice, itemDetails, itemQuantity, itemColor, itemBrand } = Data.Data;
 
     const [selectedColor, setSelectedColor] = useState('#9bdc28');
     const [selectedBrand, setselectedBrand] = useState("'Brand'");

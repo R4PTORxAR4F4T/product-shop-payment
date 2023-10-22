@@ -17,7 +17,7 @@ const Category = () => {
         
         <div className='mb-16'>
             <Title heading='Category'></Title>
-            <div className='flex flex-wrap justify-center gap-x-3 gap-y-5 lg:gap-x-10 px-5 lg:px-0 border'>
+            <div className='flex flex-wrap justify-center gap-x-3 gap-y-5 lg:gap-x-10 px-5 lg:px-0'>
 
             {categories.map((category, index) => (
                     <div key={index} title={category.name} className='flex flex-col items-center p-4 shadow-lg shadow-black rounded-full bg-gray-200 w-20 h-20 lg:w-[95px] lg:h-[95px]'>

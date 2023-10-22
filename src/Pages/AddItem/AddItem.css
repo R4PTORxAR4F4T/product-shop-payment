@@ -1,7 +1,7 @@
 .item-box {
     position: relative;
     
-    width: 400px;
+    width: auto;
     padding: 40px;
     
     background: rgba(24, 20, 20, 0.987);
@@ -19,11 +19,20 @@
     padding: 10px 0;
     font-size: 16px;
     color: #fff;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     border: none;
     border-bottom: 1px solid #fff;
     outline: none;
     background: transparent;
+  }
+
+  .item-box .user-box select {
+    width: 100%;
+    padding: 0px 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    /* outline: none; */
   }
   
   .item-box .user-box label {
@@ -36,6 +45,16 @@
     pointer-events: none;
     transition: .5s;
   }
+
+  .text-box label {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+  }
   
   .item-box .user-box input:focus ~ label,
   .item-box .user-box input:valid ~ label {
@@ -45,13 +64,25 @@
     font-size: 12px;
   }
 
-  /* .item-box .user-box textarea:focus ~ label,
-  .item-box .user-box textarea:valid ~ label {
+  .color-box label {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+
+  .item-box .text-box textarea:focus ~ label,
+  .item-box .text-box textarea:valid ~ label {
     top: -30px;
     left: 0;
     color: #bdb8b8;
     font-size: 12px;
-  } */
+  }
 
   .item-box form a {
     position: relative;
@@ -100,3 +131,21 @@
     background: linear-gradient(90deg, transparent, #03f40f);
     animation: btn-anim1 2s linear infinite;
   }
+
+
+
+
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

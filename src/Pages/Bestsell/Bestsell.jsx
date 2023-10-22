@@ -3,7 +3,7 @@ import Title from '../../Components/Title';
 
 const Bestsell = () => {
     return (
-        <div className='mb-16'>
+        <div className='mb-16 lg:w-[90%] mx-auto'>
             <Title heading='Best Selling'></Title>
             <div className='flex flex-col md:flex-row items-center justify-center gap-5'>
 
