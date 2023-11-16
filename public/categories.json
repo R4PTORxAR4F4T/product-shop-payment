@@ -1,39 +1,39 @@
 [
     {
-      "name": "Casual ",
-      "icon": "/public/tshirt.png"
+      "name": "Casual",
+      "icon": "/tshirt.png"
     },
     {
-      "name": "Formal ",
-      "icon": "/public/shirt.png"
+      "name": "Formal",
+      "icon": "/shirt.png"
     },
     {
       "name": "Sports",
-      "icon": "/image3.jpg"
+      "icon": "/tshirt.png"
     },
     {
       "name": "Business",
-      "icon": "/image4.jpg"
+      "icon": "/shirt.png"
     },
     {
       "name": "Outdoor ",
-      "icon": "/image5.jpg"
+      "icon": "/tshirt.png"
     },
     {
       "name": "Beach",
-      "icon": "/image6.jpg"
+      "icon": "/shirt.png"
     },
     {
       "name": "Traditional ",
-      "icon": "/image7.jpg"
+      "icon": "/tshirt.png"
     },
     {
       "name": "Active",
-      "icon": "/image8.jpg"
+      "icon": "/shirt.png"
     },
     {
       "name": "Sleep",
-      "icon": "/image9.jpg"
+      "icon": "/shirt.png"
     }
   ]
   

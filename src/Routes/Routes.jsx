@@ -6,6 +6,7 @@ import Shop from '../Pages/Shop/Shop';
 import Cart from '../Pages/Cart/Cart';
 import Profile from '../Pages/Profile/Profile';
 import AddItem from '../Pages/AddItem/AddItem';
+import ControlPannel from '../Pages/ControlPannel/ControlPannel';
 
 
 const router = createBrowserRouter([
@@ -30,13 +31,19 @@ const router = createBrowserRouter([
                 element: <Profile></Profile>
             },
             {
+                path: '/control',
+                element: <ControlPannel></ControlPannel>,
+                children:[
+                    {
+                        path:'AddItem',
+                        element:<AddItem></AddItem>,
+                    }
+                ]
+            },
+            {
                 path:'*',
                 element: ''
             },
-            {
-                path:'/AddItem',
-                element:<AddItem></AddItem>
-            }
         ]
     }
 ]);
